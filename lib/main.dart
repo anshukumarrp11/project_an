@@ -9,6 +9,8 @@ void main() {
 
 class MyApp extends StatelessWidget {
   final Future<FirebaseApp> _initialization = Firebase.initializeApp();
+
+  MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
         builder: (context, snapshot) {
           // Check for Errors
           if (snapshot.hasError) {
+            // ignore: avoid_print
             print("Something Went Wrong");
           }
           if (snapshot.connectionState == ConnectionState.waiting) {
