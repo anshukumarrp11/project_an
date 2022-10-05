@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
             return Center(child: CircularProgressIndicator());
           }
           return MaterialApp(
-            title: 'Flutter Firebase EMail Password Auth',
+            title: 'Project AN',
             theme: ThemeData(
               primarySwatch: Colors.deepPurple,
             ),
